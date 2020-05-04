@@ -1,7 +1,7 @@
 {
   "VoilaConfiguration": {
     "enable_nbextensions": true,  
-    "theme": "dark",
+    "theme": "light",
     "template": "aiidalab"
   }
 }
