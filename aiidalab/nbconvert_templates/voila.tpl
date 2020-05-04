@@ -11,7 +11,7 @@
 {% set bar_color = '#555454' %}
 <link href="{{resources.base_url}}voila/static/theme-dark.css" rel="stylesheet" type='text/css'>
 {% else %}
-{% set bar_color = '#5cbcaf' %}
+{% set bar_color = '#3498eb' %}
 <link href="{{resources.base_url}}voila/static/theme-light.css" rel="stylesheet" type='text/css'>
 {% endif %}
 <link href="{{resources.base_url}}voila/static/materialize.min.css" rel="stylesheet" type='text/css'>
