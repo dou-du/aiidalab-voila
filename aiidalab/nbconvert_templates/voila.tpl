@@ -11,7 +11,7 @@
 {% set bar_color = '#555454' %}
 <link href="{{resources.base_url}}voila/static/theme-dark.css" rel="stylesheet" type='text/css'>
 {% else %}
-{% set bar_color = '#3498eb' %}
+{% set bar_color = '#f3f700' %}
 <link href="{{resources.base_url}}voila/static/theme-light.css" rel="stylesheet" type='text/css'>
 {% endif %}
 <link href="{{resources.base_url}}voila/static/materialize.min.css" rel="stylesheet" type='text/css'>
@@ -24,6 +24,13 @@
 
   .nav-wrapper {
     background-color: {{ bar_color }};
+  }
+
+  .jupyter-button {
+    color: white;
+    background: #4C8FFB;
+    border: 1px #3079ED solid;
+    box-shadow: inset 0 1px 0 #80B0FB;
   }
 
   .brand-logo {
@@ -136,7 +143,7 @@ var voila_process = function(cell_index, cell_count) {
       </nav>
     </div>
   </header>
-          <button type="button" onclick="myFunction()" style="float: right;">Return to JupyterLab</button>
+          <button class="jupyter-button" type="button" onclick="myFunction()" style="float: right;">JupyterLab</button>
 
   <main>
     <div class="container">
