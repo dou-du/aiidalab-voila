@@ -213,7 +213,7 @@ var voila_process = function(cell_index, cell_count) {
     });
 
     function myFunction(){
-      var url = window.location.pahtname.replace("voila/render", "lab/tree")
+      var url = window.location.pathname.replace("voila/render", "lab/tree")
       window.open(url, "_self");
     }
   </script>
