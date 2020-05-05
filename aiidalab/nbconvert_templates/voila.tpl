@@ -209,7 +209,7 @@ var voila_process = function(cell_index, cell_count) {
 {%- endblock body_header -%}
 
   <header>
-    <div class="navbar-fixed">
+    <div class="navbar-fixed" style="height:40px">
       <nav class="top-nav" style="height:40px">
         <div class="nav-wrapper" style="height:40px">
           <a href="#!" class="brand-logo-container">
