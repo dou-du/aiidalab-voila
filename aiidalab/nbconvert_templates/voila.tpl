@@ -216,7 +216,7 @@ var voila_process = function(cell_index, cell_count) {
             <object class="brand-logo" type="image/svg+xml" data="{{ resources.base_url }}voila/static/aiidalab_logo.svg"></object>
           </a>
           <ul class="right">
-            <li><a href="#"><i class="material-icons" id="kernel-status-icon">radio_button_unchecked</i></a></li>
+            <li><a href="#"><i class="material-icons" id="kernel-status-icon" style="line-height: 40px;">radio_button_unchecked</i></a></li>
           </ul>
         </div>
       </nav>
