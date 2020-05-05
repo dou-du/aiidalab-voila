@@ -222,7 +222,7 @@ var voila_process = function(cell_index, cell_count) {
       </nav>
     </div>
   </header>
-          <button class="orange" onclick="myFunction()" style="float: right;">JupyterLab</button>
+          <button class="orange" onclick="myFunction()" style="margin-top: 5px; margin-right: 3px; position: fixed; left: 92%">JupyterLab</button>
 
   <main>
     <div class="container">
