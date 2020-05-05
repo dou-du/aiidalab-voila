@@ -210,8 +210,8 @@ var voila_process = function(cell_index, cell_count) {
 
   <header>
     <div class="navbar-fixed">
-      <nav class="top-nav">
-        <div class="nav-wrapper">
+      <nav class="top-nav" style="height:40px">
+        <div class="nav-wrapper" style="height:40px">
           <a href="#!" class="brand-logo-container">
             <object class="brand-logo" type="image/svg+xml" data="{{ resources.base_url }}voila/static/aiidalab_logo.svg"></object>
           </a>
