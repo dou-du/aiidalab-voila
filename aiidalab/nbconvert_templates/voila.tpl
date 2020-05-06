@@ -6,9 +6,13 @@
 {% endblock notebook_execute %}
 
 {%- block html_head -%}
+<meta charset="utf-8">
+<title>Voila: example</title>
 <script src="{{resources.base_url}}voila/static/html2pdf.bundle.min.js"></script>
+<script src="/voila/static/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous">
+</script>
 {%- block html_head_css -%}
-
+<link rel="stylesheet" href="https://unpkg.com/font-awesome@4.5.0/css/font-awesome.min.css" type="text/css">
 <link href="{{resources.base_url}}voila/static/index.css" rel="stylesheet" type='text/css'>
 {% if resources.theme == 'dark' %}
 {% set bar_color = '#555454' %}
