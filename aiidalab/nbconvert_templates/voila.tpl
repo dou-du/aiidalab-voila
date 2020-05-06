@@ -5,7 +5,10 @@
 {% block notebook_execute %}
 {% endblock notebook_execute %}
 
+{%- block html_head -%}
+<script src="{{resources.base_url}}voila/static/html2pdf.bundle.min.js"></script>
 {%- block html_head_css -%}
+
 <link href="{{resources.base_url}}voila/static/index.css" rel="stylesheet" type='text/css'>
 {% if resources.theme == 'dark' %}
 {% set bar_color = '#555454' %}
@@ -186,8 +189,10 @@ a.anchor-link {
 }
 </style>
 
+
 {{ mathjax() }}
 {%- endblock html_head_css -%}
+{%- endblock html_head -%}
 
 {%- block body -%}
 {%- block body_header -%}
@@ -222,12 +227,13 @@ var voila_process = function(cell_index, cell_count) {
       </nav>
     </div>
   </header>
+          <button class="blue" onclick="generatePDF()" style="margin-top: 5px; margin-right: 3px; position: fixed; left:   2%">PDF</button>
           <button class="orange" onclick="myFunction()" style="margin-top: 5px; margin-right: 3px; position: fixed; left: 92%">JupyterLab</button>
 
   <main style="background-color:#e6e6e6">
     <div class="container">
       <div class="row">
-        <div class="col s12" style="margin-bottom: 30px">
+        <div class="col s12" id="col_s12" style="margin-bottom: 30px">
           {% if resources.theme == 'dark' %}
           <div class="jp-Notebook theme-dark">
           {% else %}
@@ -283,6 +289,7 @@ var voila_process = function(cell_index, cell_count) {
   {{ super() }}
 
   <script type="text/javascript">
+
     requirejs(['static/voila'], function(voila) {
       (async function() {
         var kernel = await voila.connectKernel();
@@ -300,11 +307,21 @@ var voila_process = function(cell_index, cell_count) {
       })();
     });
 
+    function generatePDF() {
+      // Choose the element that our invoice is rendered in.
+      const element = document.getElementById("col_s12");
+      // Choose the element and save the PDF for our user.
+      html2pdf()
+        .from(element)
+        .save();
+    }
+
     function myFunction(){
       var url = window.location.pathname.replace("voila/render", "lab/tree")
       window.open(url, "_self");
     }
   </script>
+
 {% endblock footer_js %}
 
 {%- endblock body -%}
