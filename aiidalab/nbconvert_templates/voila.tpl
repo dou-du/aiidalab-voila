@@ -5,12 +5,6 @@
 {% block notebook_execute %}
 {% endblock notebook_execute %}
 
-{%- block html_head -%}
-<meta charset="utf-8">
-<title>Voila: example</title>
-<script src="{{resources.base_url}}voila/static/html2pdf.bundle.min.js"></script>
-<script src="/voila/static/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous">
-</script>
 {%- block html_head_css -%}
 <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.5.0/css/font-awesome.min.css" type="text/css">
 <link href="{{resources.base_url}}voila/static/index.css" rel="stylesheet" type='text/css'>
@@ -196,7 +190,6 @@ a.anchor-link {
 
 {{ mathjax() }}
 {%- endblock html_head_css -%}
-{%- endblock html_head -%}
 
 {%- block body -%}
 {%- block body_header -%}
@@ -231,7 +224,6 @@ var voila_process = function(cell_index, cell_count) {
       </nav>
     </div>
   </header>
-          <button class="blue" onclick="generatePDF()" style="margin-top: 5px; margin-right: 3px; position: fixed; left:   2%">PDF</button>
           <button class="orange" onclick="myFunction()" style="margin-top: 5px; margin-right: 3px; position: fixed; left: 92%">JupyterLab</button>
 
   <main style="background-color:#e6e6e6">
@@ -268,7 +260,7 @@ var voila_process = function(cell_index, cell_count) {
           </div>
         </div>
         <hr style="border-top: 3px solid #8c8b8b;">
-        <a style="left: 10%" href="https://www.materialscloud.org/work/aiidalab">The AiiDA lab web platform gives users access to their personal AiiDA environment in the cloud. https://www.materialscloud.org/work/aiidalab</a>
+        <a style="left: 10%" href="https://www.materialscloud.org/work/aiidalab">Aiida Lab https://www.materialscloud.org/work/aiidalab</a>
       </div>
     </div>
   </main>
@@ -310,15 +302,6 @@ var voila_process = function(cell_index, cell_count) {
         });
       })();
     });
-
-    function generatePDF() {
-      // Choose the element that our invoice is rendered in.
-      const element = document.getElementById("col_s12");
-      // Choose the element and save the PDF for our user.
-      html2pdf()
-        .from(element)
-        .save();
-    }
 
     function myFunction(){
       var url = window.location.pathname.replace("voila/render", "lab/tree")
