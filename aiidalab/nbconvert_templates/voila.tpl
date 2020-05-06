@@ -227,7 +227,7 @@ var voila_process = function(cell_index, cell_count) {
   <main style="background-color:#e6e6e6">
     <div class="container">
       <div class="row">
-        <div class="col s12">
+        <div class="col s12" style="margin-bottom: 30px">
           {% if resources.theme == 'dark' %}
           <div class="jp-Notebook theme-dark">
           {% else %}
@@ -257,6 +257,8 @@ var voila_process = function(cell_index, cell_count) {
             <div id="rendered_cells" style="display: none">
           </div>
         </div>
+        <hr style="border-top: 3px solid #8c8b8b;">
+        <a style="left: 10%" href="https://www.materialscloud.org/work/aiidalab">The AiiDA lab web platform gives users access to their personal AiiDA environment in the cloud. https://www.materialscloud.org/work/aiidalab</a>
       </div>
     </div>
   </main>
